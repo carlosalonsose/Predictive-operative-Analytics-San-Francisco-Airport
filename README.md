@@ -33,8 +33,7 @@ The goal is to turn raw monthly counts into decisions: **where will demand land,
 ## 🗂️ Repository structure
 
 ```
-├── Business_LTSM.ipynb            # Full analysis: LSTM, forecasts, terminal & airline analysis
-├── Business_LTSM_Years.ipynb      # LSTM on yearly aggregated data
+├── Business_LTSM.ipynb            # Step-by-step LSTM training demo, plus terminal & airline exploration
 ├── Business_LTSM_dashboard.py     # Interactive Streamlit dashboard
 └── Data/
     └── Air_Traffic_Passenger_Statistics_20251204.csv
