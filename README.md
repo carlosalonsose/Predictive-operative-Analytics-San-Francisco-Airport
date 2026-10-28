@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✈️ Predictive Operative Analytics — San Francisco Airport
+# Predictive Operative Analytics — San Francisco Airport
 
 **LSTM forecasting and strategic analysis of passenger traffic at SFO**
 
@@ -13,24 +13,24 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 Business Intelligence & Analytics project built on the public **SFO Air Traffic Passenger Statistics** dataset (1999 → 2025). It combines a deep-learning forecast of passenger volume with a business-oriented analysis of how traffic is distributed across terminals, airlines and fare categories.
 
 The goal is to turn raw monthly counts into decisions: **where will demand land, which terminals will feel it, and how exposed is the airport to a single airline?**
 
-## ✨ Features
+## Features
 
 | | |
 |---|---|
-| 🔮 **LSTM forecast** | Univariate LSTM (look-back of 3, Dropout, early stopping) trained on monthly passenger totals, with train/test validation and RMSE. |
-| 📅 **Future predictions** | Recursive multi-month forecast (1–24 months) and projected impact on each terminal. |
-| 📈 **Seasonality** | Trend / seasonal / residual decomposition of the series. |
-| 🏢 **Terminal analysis** | Yearly passenger share per terminal (T1, T2, T3, International, Other). |
-| 🚪 **Operations & commercial** | Gate-level congestion, airline distribution, low-cost vs. premium evolution. |
-| ⚠️ **Risk assessment** | Airline dependency analysis and a risk simulation with an automated strategic read-out. |
+| **LSTM forecast** | Univariate LSTM (look-back of 3, Dropout, early stopping) trained on monthly passenger totals, with train/test validation and RMSE. |
+| **Future predictions** | Recursive multi-month forecast (1–24 months) and projected impact on each terminal. |
+| **Seasonality** | Trend / seasonal / residual decomposition of the series. |
+| **Terminal analysis** | Yearly passenger share per terminal (T1, T2, T3, International, Other). |
+| **Operations & commercial** | Gate-level congestion, airline distribution, low-cost vs. premium evolution. |
+| **Risk assessment** | Airline dependency analysis and a risk simulation with an automated strategic read-out. |
 
-## 🗂️ Repository structure
+## Repository structure
 
 ```
 ├── Business_LTSM.ipynb            # Step-by-step LSTM training demo, plus terminal & airline exploration
@@ -39,7 +39,7 @@ The goal is to turn raw monthly counts into decisions: **where will demand land,
     └── Air_Traffic_Passenger_Statistics_20251204.csv
 ```
 
-## 🖥️ Dashboard
+## Dashboard
 
 The Streamlit app has five tabs:
 
@@ -49,7 +49,7 @@ The Streamlit app has five tabs:
 4. **Dependency Analysis** — reliance on individual airlines per terminal
 5. **Risk Assessment** — airline-loss simulation
 
-## 🚀 Getting started
+## Getting started
 
 ```bash
 git clone https://github.com/carlosalonsose/Predictive-operative-Analytics-San-Francisco-Airport.git
@@ -58,7 +58,7 @@ cd Predictive-operative-Analytics-San-Francisco-Airport
 pip install streamlit pandas numpy plotly matplotlib tensorflow scikit-learn statsmodels jupyter
 ```
 
-The notebooks and the dashboard read the CSV from the **current directory**, so copy it next to them first:
+The notebook and the dashboard read the CSV from the **current directory**, so copy it next to them first:
 
 ```bash
 cp Data/Air_Traffic_Passenger_Statistics_20251204.csv .
@@ -70,13 +70,13 @@ Run the dashboard:
 streamlit run Business_LTSM_dashboard.py
 ```
 
-Or open the notebooks:
+Or open the notebook:
 
 ```bash
 jupyter notebook Business_LTSM.ipynb
 ```
 
-## 🧠 Methodology
+## Methodology
 
 1. **Preparation** — passenger counts aggregated by month; chronological 80/20 train/test split.
 2. **Scaling** — `MinMaxScaler` fitted on train only, then applied to test (no leakage).
@@ -84,10 +84,10 @@ jupyter notebook Business_LTSM.ipynb
 4. **Evaluation** — RMSE on train and test in original units.
 5. **Forecasting** — recursive prediction feeding each forecast back as input.
 
-## 📊 Data
+## Data
 
 [SFO Air Traffic Passenger Statistics](https://data.sfgov.org/Transportation/Air-Traffic-Passenger-Statistics/rkru-6vcg) — DataSF open data portal. Monthly enplaned/deplaned passengers by airline, terminal, boarding area and fare category.
 
-## 👤 Author
+## Author
 
 **Carlos Alonso** — Business Intelligence & Analytics, Erasmus.
